@@ -1,7 +1,7 @@
 FROM resin/rpi-raspbian:jessie
 
 RUN apt-get update
-RUN apt-get install wget git-core python python-pip --yes --force-yes --no-install-recommends
+RUN apt-get install wget git-core python python-pip python-requests --yes --force-yes --no-install-recommends
 RUN pip install paho-mqtt
 RUN git clone https://github.com/jpmens/mqttwarn.git
 RUN apt-get remove -y wget git-core python-pip
